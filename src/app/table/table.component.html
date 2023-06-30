@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h1 class="text-center">Your flights and hotels</h1>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Flight</th>
+      <th scope="col">Departure</th>
+      <th scope="col">Arrival</th>
+      <th scope="col">Hotel</th>
+      <th scope="col">Check-in</th>
+      <th scope="col">Check-out</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of flightsHotels; let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{row.flight.code}}</td>
+      <td>{{row.flight.departure}}</td>
+      <td>{{row.flight.arrival}}</td>
+      <td>{{row.hotel.code}}</td>
+      <td>{{row.hotel.checkin}}</td>
+      <td>{{row.hotel.checkout}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
